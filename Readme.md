@@ -18,5 +18,11 @@ Last IP in the last section
 process = 10
 How many process should check the IPs
 ### What to Search?
-offline = True
-If offline = True you get all Offline
+online = True
+If online = True you get all omline IPs
+### Save as File?
+save = True
+Save the IP to a file
+### Print at end?
+print_out = False
+Print the IP at the end?
