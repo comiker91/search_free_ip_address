@@ -17,3 +17,6 @@ Last IP in the last section
 ### Process to use
 process = 10
 How many process should check the IPs
+### What to Search?
+offline = True
+If offline = True you get all Offline
