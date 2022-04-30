@@ -2,15 +2,15 @@ import logging
 from multiprocessing import Pool
 from datetime import datetime
 
-import src.config_ini
-import src.log_ini
-import src.ip_handler
+import src.config_ini as Config
+import src.log_ini as Log
+import src.ip_handler as IPhandler
 
 # Initial config
-config = src.config_ini.conf_ini(filepath="config.ini")
+config = Config.conf_ini(filepath="config.ini")
 
 # Initial Log
-src.log_ini.log_ini(config=config)
+Log.log_ini(config=config)
 logger = logging.getLogger("IP Checker")
 
 
@@ -18,7 +18,7 @@ if __name__ == '__main__':
     logging.info("*************************************************")
     logger.info("Starting IP check")
     # initial ip handler
-    ip_handler = src.ip_handler.IP(config=config, logger=logger)
+    ip_handler = IPhandler.IP(config=config, logger=logger)
 
     # Generate the IP Range
     ip_range = ip_handler.get_ip_range(config.search_start, config.search_end)
