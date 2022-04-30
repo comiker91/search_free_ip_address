@@ -100,4 +100,4 @@ I recomend to use [Postman](https://www.postman.com/downloads/) to test the api
 - [ ] Extend Endpoints
 - [ ] Extend Docs
 - [ ] Add ping latenz
-- [ ] Docs (https://search-free-ip-address.readthedocs.io/en/latest/)
+- [ ] [Docs](https://github.com/comiker91/search_free_ip_address/wiki)
