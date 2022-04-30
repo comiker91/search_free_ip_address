@@ -37,7 +37,7 @@ class IP(object):
         Returns:
             range: IP range
         """
-        ip_range = range(start_ip, last_ip)
+        ip_range = range(start_ip, last_ip+1)
         return ip_range
 
     def get_list(self, ip_list:list) -> list:
@@ -52,4 +52,29 @@ class IP(object):
         self.logger.debug("Creating ip list")
         ip_collection = list(ip for ip in ip_list if ip)
         return ip_collection
-            
+    
+    def get_dict(self, checked_list:list, start:int, last:int) -> dict:
+        """Get a result dict
+
+        Args:
+            checked_list (list): Checked IP address
+            start (int): First IP
+            last (int): Last IP
+
+        Returns:
+            dict: IP:used status
+        """
+        results = {}
+        count = 0
+        self.logger.debug("Start creating result dict")
+        for ip in checked_list:
+            if ip:
+                results[ip] = True
+                self.logger.debug(f"Result for {ip} True")
+            else:
+                ip = self.config.search_ip+str(count)
+                results[ip] = False
+                self.logger.debug(f"Result for {ip} Flase")
+            count +=1
+
+        return results
