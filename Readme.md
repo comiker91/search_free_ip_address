@@ -99,3 +99,4 @@ I recomend to use [Postman](https://www.postman.com/downloads/) to test the api
 - [ ] Save last Check via API request
 - [ ] Extend Endpoints
 - [ ] Extend Docs
+- [ ] Add ping latenz
