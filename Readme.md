@@ -17,7 +17,7 @@ If you want to use the api server please install the requirements.txt via pip
 Windows:
 > pip install -r requirements.txt
 
-Linuix
+Linux
 > pip3 install -r requirements.txt 
 
 ## Settings
