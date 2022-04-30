@@ -25,8 +25,19 @@ log_level = "info"
 # log path
 log_path = "."
 
+# API Settings
+host = "127.0.0.1"
+port = 8000
 
 def conf_ini(filepath: str):
+    """Initial the Config
+
+    Args:
+        filepath (str): Path to config.ini
+
+    Returns:
+        SimpleNamespace: Config Data
+    """
     config = configparser.ConfigParser()
     config.read(filenames=filepath)
     config_data = SimpleNamespace(
@@ -40,7 +51,9 @@ def conf_ini(filepath: str):
         output = config.get("settings","output", fallback=output),
         log_file=config.get("log","log_file", fallback=log_file),
         log_level=config.get("log","level",fallback=log_level),
-        log_path=config.get("log","path",fallback=log_path)
+        log_path=config.get("log","path",fallback=log_path),
+        host=config.get("api","host",fallback=host),
+        port=config.getint("api","port",fallback=port)
     )
 
     return config_data
