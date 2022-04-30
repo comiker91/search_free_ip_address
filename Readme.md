@@ -3,7 +3,7 @@
 ## Usage
 
 Just set your settings like you need in the config.ini
-If done just run the main.py
+If done just run the main.py (python main.py Windows python3 main.py linux)
 
 ## Requirements
 
