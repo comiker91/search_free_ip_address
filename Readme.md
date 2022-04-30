@@ -3,6 +3,11 @@
 ## Usage
 
 Just set your settings like you need in the config.ini
+If done just run the main.py
+
+## Requirements
+
+Python >= 3.9
 
 ## Settings
 
