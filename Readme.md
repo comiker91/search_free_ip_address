@@ -8,6 +8,7 @@ If done just run the main.py
 ## Requirements
 
 Python >= 3.9
+[Download](https://www.python.org/downloads/)
 
 ## Settings
 
